@@ -1,0 +1,8 @@
+{
+  "type": "delay",
+  "displayName": "Delay",
+  "configSchema": { "type": "object" },
+  "sensitivePaths": [],
+  "defaults": { "durationSeconds": 1 },
+  "capabilities": { "external": false, "supportsRetry": true, "supportsArtifacts": false }
+}

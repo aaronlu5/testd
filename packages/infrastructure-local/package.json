@@ -1,0 +1,41 @@
+{
+  "name": "@test-platform/infrastructure-local",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Local filesystem, SQLite, and secret-provider adapters for the core ports.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "migrations"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc -b && tsc -p tsconfig.test.json",
+    "clean": "tsc -b --clean",
+    "test": "tsc -b && vitest run"
+  },
+  "dependencies": {
+    "@azure/identity": "^4.13.3",
+    "@azure/keyvault-secrets": "^4.11.2",
+    "@azure/service-bus": "^7.10.0",
+    "@azure/storage-blob": "^12.34.0",
+    "@test-platform/contracts": "workspace:*",
+    "@test-platform/core": "workspace:*",
+    "long": "^5.3.2",
+    "mssql": "^11.0.2"
+  },
+  "devDependencies": {
+    "@types/mssql": "^12.3.0",
+    "vitest": "^5.0.3"
+  }
+}

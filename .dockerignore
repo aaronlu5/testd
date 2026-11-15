@@ -1,0 +1,13 @@
+**/node_modules
+**/dist
+**/coverage
+**/*.tsbuildinfo
+.git
+.env
+.env.*
+!.env.example
+runtime
+config/environments.local.json
+apps/web/e2e/.runtime
+apps/web/test-results
+apps/web/playwright-report

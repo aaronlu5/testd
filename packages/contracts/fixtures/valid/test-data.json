@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "id": "01JDATA0N5C6E7MR8YPJ4XW1BC",
+  "version": 1,
+  "name": "Valid order - standard customer",
+  "tags": ["orders", "happy-path"],
+  "metadata": { "createdAt": "2026-01-15T09:00:00.000Z", "createdBy": "tester@example.test" },
+  "data": { "order": { "id": "ORD-10001", "customerId": "CUS-100" } }
+}

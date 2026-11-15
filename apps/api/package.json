@@ -1,0 +1,28 @@
+{
+  "name": "@test-platform/api",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Control-plane REST API (Fastify).",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc -b && tsc -p tsconfig.test.json",
+    "clean": "tsc -b --clean",
+    "test": "tsc -b && vitest run",
+    "start": "node dist/server.js",
+    "dev": "tsc -b && node --env-file-if-exists=../../.env dist/server.js"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.3.0",
+    "@test-platform/contracts": "workspace:*",
+    "@test-platform/core": "workspace:*",
+    "@test-platform/infrastructure-local": "workspace:*",
+    "@test-platform/step-sdk": "workspace:*",
+    "fastify": "^5.12.5"
+  },
+  "devDependencies": {
+    "vitest": "^5.0.3"
+  },
+  "main": "./dist/server.js"
+}

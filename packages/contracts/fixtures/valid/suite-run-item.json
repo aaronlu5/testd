@@ -1,0 +1,16 @@
+{
+  "id": "01J1TEM8M2B5D4KQ7XNH3WV9ZA",
+  "suiteRunId": "01JSV1TERVN8M2B5D4KQ7XNH3W",
+  "position": 0,
+  "test": {
+    "id": "01JTEST8M2B5D4KQ7XNH3WV9ZA",
+    "version": 3
+  },
+  "testData": {
+    "id": "01JDATA0N5C6E7MR8YPJ4XW1BC",
+    "version": 1
+  },
+  "runId": "01JRVN3Z8M2B5D4KQ7XNH3WV9Z",
+  "status": "Paused",
+  "dispatchedAt": "2026-01-15T10:00:01.000Z"
+}

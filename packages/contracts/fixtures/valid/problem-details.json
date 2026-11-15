@@ -1,0 +1,11 @@
+{
+  "type": "https://test-platform.dev/problems/validation",
+  "title": "Validation failed",
+  "status": 422,
+  "detail": "The Test definition is invalid.",
+  "code": "VALIDATION_SCHEMA",
+  "requestId": "req-1",
+  "errors": [
+    { "path": "/nodes", "message": "must NOT have fewer than 1 items", "keyword": "minItems" }
+  ]
+}

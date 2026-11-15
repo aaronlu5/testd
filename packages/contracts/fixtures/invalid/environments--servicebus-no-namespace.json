@@ -1,0 +1,15 @@
+{
+  "environments": [
+    {
+      "id": "orders-test",
+      "name": "Invalid",
+      "classification": "TEST",
+      "targets": {
+        "t": {
+          "kind": "azureServiceBus",
+          "allowedEntities": ["order-events"]
+        }
+      }
+    }
+  ]
+}

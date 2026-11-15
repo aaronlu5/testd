@@ -1,0 +1,33 @@
+{
+  "environments": [
+    {
+      "id": "local-example",
+      "name": "Local example environment (no live targets)",
+      "classification": "TEST",
+      "limits": {
+        "maxStepTimeoutSeconds": 120,
+        "maxRetryAttempts": 3,
+        "maxPayloadCaptureBytes": 65536
+      },
+      "values": { "region": "example" },
+      "targets": {
+        "example-api": {
+          "kind": "http",
+          "baseUrl": "https://example.invalid/api",
+          "allowedPaths": ["/orders/*"],
+          "secretRef": "example-api-key"
+        },
+        "example-storage": {
+          "kind": "azureBlob",
+          "accountUrl": "https://example.invalid",
+          "allowedContainers": ["example-container"]
+        },
+        "example-bus": {
+          "kind": "azureServiceBus",
+          "namespace": "example.invalid",
+          "allowedEntities": ["example-queue"]
+        }
+      }
+    }
+  ]
+}

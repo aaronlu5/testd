@@ -1,0 +1,21 @@
+{
+  "environments": [
+    {
+      "id": "orders-test",
+      "name": "Invalid",
+      "classification": "TEST",
+      "targets": {
+        "t": {
+          "kind": "http",
+          "baseUrl": "https://example.azure-api.net",
+          "allowedPaths": ["/orders/*"],
+          "authentication": {
+            "type": "secretReference",
+            "provider": "localPlainText",
+            "name": "https://orders-kv.vault.azure.net/secrets/orders-api-key"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+/*
+ * Testd design tokens. Original to this project.
+ * Dark is the default; light is applied with <html data-theme="light">.
+ * Brand accent is sampled from the Testd logo (aqua / cyan).
+ */
+@layer td-tokens {
+  :root {
+    /* Typography */
+    --td-font-sans:
+      'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --td-font-mono:
+      'JetBrains Mono Variable', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+    --td-text-xs: 0.75rem;
+    --td-text-sm: 0.8125rem;
+    --td-text-md: 0.9375rem;
+    --td-text-lg: 1.125rem;
+    --td-text-xl: 1.5rem;
+    --td-text-2xl: 2rem;
+    --td-leading: 1.5;
+
+    /* Spacing (4pt) */
+    --td-space-1: 0.25rem;
+    --td-space-2: 0.5rem;
+    --td-space-3: 0.75rem;
+    --td-space-4: 1rem;
+    --td-space-5: 1.5rem;
+    --td-space-6: 2rem;
+    --td-space-7: 3rem;
+    --td-space-8: 4rem;
+
+    /* Shape */
+    --td-radius-sm: 4px;
+    --td-radius-md: 8px;
+    --td-radius-lg: 12px;
+    --td-radius-pill: 999px;
+
+    /* Layout */
+    --td-topbar-h: 3.5rem;
+    --td-nav-w: 15.5rem;
+    --td-nav-rail-w: 4rem;
+    --td-content-max: 88rem;
+
+    /* Motion */
+    --td-ease: cubic-bezier(0.2, 0, 0, 1);
+    --td-dur-fast: 120ms;
+    --td-dur: 200ms;
+
+    /* Stacking */
+    --td-z-nav: 30;
+    --td-z-topbar: 40;
+    --td-z-dropdown: 60;
+    --td-z-overlay: 80;
+    --td-z-dialog: 90;
+    --td-z-toast: 100;
+  }
+
+  /* Dark (default) */
+  :root,
+  :root[data-theme='dark'] {
+    color-scheme: dark;
+    --td-bg: #080d12;
+    --td-surface: #0e151c;
+    --td-surface-2: #131c25;
+    --td-surface-3: #19242f;
+    --td-border: #223140;
+    --td-border-strong: #2f4357;
+    --td-text: #e7eef5;
+    --td-text-muted: #94a5b6;
+    --td-text-faint: #8091a3;
+
+    --td-accent: #22d3c5;
+    --td-accent-hover: #4be0d4;
+    --td-accent-press: #16b3a7;
+    --td-on-accent: #04211f;
+    --td-accent-soft: color-mix(in srgb, var(--td-accent) 14%, transparent);
+    --td-accent-text: #4be0d4;
+
+    --td-success: #3ddc97;
+    --td-warning: #f5b84b;
+    --td-danger: #ff6b7a;
+    --td-info: #5eb4ff;
+    --td-running: #7aa2ff;
+    --td-paused: #c58bff;
+
+    --td-focus: #7df0e6;
+    --td-overlay: rgb(2 6 10 / 0.66);
+    --td-shadow-1: 0 1px 0 rgb(255 255 255 / 0.03) inset, 0 1px 2px rgb(0 0 0 / 0.4);
+    --td-shadow-2: 0 12px 32px rgb(0 0 0 / 0.5), 0 0 0 1px var(--td-border);
+  }
+
+  :root[data-theme='light'] {
+    color-scheme: light;
+    --td-bg: #f3f6f9;
+    --td-surface: #ffffff;
+    --td-surface-2: #f7f9fb;
+    --td-surface-3: #eaeff4;
+    --td-border: #d7e0e8;
+    --td-border-strong: #b9c7d4;
+    --td-text: #0d1a26;
+    --td-text-muted: #4b5d6f;
+    --td-text-faint: #566779;
+
+    --td-accent: #087a73;
+    --td-accent-hover: #066862;
+    --td-accent-press: #055651;
+    --td-on-accent: #ffffff;
+    --td-accent-soft: color-mix(in srgb, var(--td-accent) 11%, transparent);
+    --td-accent-text: #07706a;
+
+    --td-success: #11803f;
+    --td-warning: #855000;
+    --td-danger: #c3263a;
+    --td-info: #12579f;
+    --td-running: #3a52c9;
+    --td-paused: #7a3fc4;
+
+    --td-focus: #0a8a82;
+    --td-overlay: rgb(13 26 38 / 0.45);
+    --td-shadow-1: 0 1px 2px rgb(13 26 38 / 0.08);
+    --td-shadow-2: 0 12px 32px rgb(13 26 38 / 0.18), 0 0 0 1px var(--td-border);
+  }
+}

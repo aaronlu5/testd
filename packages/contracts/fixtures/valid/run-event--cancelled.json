@@ -1,0 +1,9 @@
+{
+  "type": "run.cancelled",
+  "runId": "01JRVN3Z8M2B5D4KQ7XNH3WV9Z",
+  "timestamp": "2026-01-15T10:05:00.000Z",
+  "data": {
+    "cancelledAt": "2026-01-15T10:05:00.000Z",
+    "whilePaused": true
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "test-orchestration-platform",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Test Orchestration Platform - local functional-testing platform (Phase 2: Breakpoints, Suites, Azure targets)",
+  "type": "module",
+  "packageManager": "pnpm@12.9.1",
+  "engines": {
+    "node": ">=24 <25",
+    "pnpm": ">=12 <13"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "install:check": "pnpm install --frozen-lockfile",
+    "typecheck": "pnpm -r run typecheck",
+    "lint": "eslint . && pnpm --filter @test-platform/web run lint:check",
+    "format": "prettier --check . && pnpm --filter @test-platform/web run format:check",
+    "format:write": "prettier --write . && pnpm --filter @test-platform/web run format",
+    "test": "pnpm -r run test",
+    "test:e2e": "pnpm --filter @test-platform/web run test:e2e",
+    "build": "pnpm -r run build",
+    "clean": "pnpm -r run clean",
+    "stack:check": "node scripts/stack-check.mjs",
+    "compose:config": "docker compose config",
+    "compose:up": "docker compose up --build",
+    "compose:down": "docker compose down"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^24.19.1",
+    "eslint": "^10.12.0",
+    "prettier": "^3.9.9",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.71.0"
+  }
+}

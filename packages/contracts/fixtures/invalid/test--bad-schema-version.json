@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 3,
+  "id": "01JTEST8M2B5D4KQ7XNH3WV9ZA",
+  "version": 1,
+  "name": "Wrong schema version",
+  "tags": [],
+  "metadata": { "createdAt": "2026-01-15T09:30:00.000Z", "createdBy": "tester@example.test" },
+  "variables": {},
+  "nodes": [{ "id": "a", "type": "delay", "name": "A", "parameters": {} }],
+  "edges": []
+}

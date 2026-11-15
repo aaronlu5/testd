@@ -1,0 +1,42 @@
+{
+  "id": "01JSV1TERVN8M2B5D4KQ7XNH3W",
+  "status": "WaitingForBreakpoint",
+  "environmentId": "local-example",
+  "suite": {
+    "id": "01JSV1TE8M2B5D4KQ7XNH3WV9Z",
+    "version": 1
+  },
+  "requestedBy": "tester@example.test",
+  "requestedAt": "2026-01-15T10:00:00.000Z",
+  "startedAt": "2026-01-15T10:00:01.000Z",
+  "maxConcurrency": 1,
+  "variableOverrides": {},
+  "snapshots": {
+    "suite": {
+      "schemaVersion": 1,
+      "id": "01JSV1TE8M2B5D4KQ7XNH3WV9Z",
+      "version": 1,
+      "name": "Smoke",
+      "tags": [],
+      "metadata": {
+        "createdAt": "2026-01-15T09:30:00.000Z",
+        "createdBy": "tester@example.test"
+      },
+      "maxConcurrency": 1,
+      "items": [
+        {
+          "testId": "01JTEST8M2B5D4KQ7XNH3WV9ZA",
+          "dataSetId": "01JDATA0N5C6E7MR8YPJ4XW1BC"
+        }
+      ]
+    },
+    "tests": [],
+    "testData": [],
+    "environment": {
+      "id": "local-example",
+      "name": "Local",
+      "classification": "TEST",
+      "targets": {}
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "seq": 4,
+  "type": "suiteRun.updated",
+  "suiteRunId": "01JSV1TERVN8M2B5D4KQ7XNH3W",
+  "timestamp": "2026-01-15T10:00:05.000Z",
+  "data": {
+    "status": "WaitingForBreakpoint",
+    "counts": {
+      "total": 2,
+      "Pending": 1,
+      "Queued": 0,
+      "Running": 0,
+      "Paused": 1,
+      "Cancelling": 0,
+      "Succeeded": 0,
+      "Failed": 0,
+      "Cancelled": 0,
+      "Skipped": 0
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "environments": [
+    {
+      "id": "bad",
+      "name": "Raw connection string is not permitted",
+      "classification": "TEST",
+      "targets": {
+        "storage": {
+          "kind": "azureBlob",
+          "accountUrl": "https://example.invalid",
+          "allowedContainers": ["c"],
+          "connectionString": "DefaultEndpointsProtocol=https;AccountKey=not-a-real-key"
+        }
+      }
+    }
+  ]
+}

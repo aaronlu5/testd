@@ -1,0 +1,14 @@
+{
+  "id": "01JSV1TERVN8M2B5D4KQ7XNH3W",
+  "status": "Queued",
+  "environmentId": "local-example",
+  "suite": {
+    "id": "01JSV1TE8M2B5D4KQ7XNH3WV9Z",
+    "version": 1
+  },
+  "requestedBy": "tester@example.test",
+  "requestedAt": "2026-01-15T10:00:00.000Z",
+  "maxConcurrency": 0,
+  "variableOverrides": {},
+  "snapshots": {}
+}

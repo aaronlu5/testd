@@ -1,0 +1,33 @@
+{
+  "name": "@test-platform/contracts",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "description": "DTOs, domain types, JSON schemas, and error codes shared by all applications.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc -b && tsc -p tsconfig.test.json",
+    "clean": "tsc -b --clean",
+    "test": "tsc -b && vitest run"
+  },
+  "dependencies": {
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1"
+  },
+  "devDependencies": {
+    "vitest": "^5.0.3"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@test-platform/worker",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Functional-test worker: claims queued jobs and executes Runs sequentially.",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc -b && tsc -p tsconfig.test.json",
+    "clean": "tsc -b --clean",
+    "test": "tsc -b && vitest run",
+    "start": "node dist/main.js",
+    "dev": "tsc -b && node --env-file-if-exists=../../.env dist/main.js"
+  },
+  "dependencies": {
+    "@test-platform/contracts": "workspace:*",
+    "@test-platform/core": "workspace:*",
+    "@test-platform/infrastructure-local": "workspace:*",
+    "@test-platform/step-sdk": "workspace:*"
+  },
+  "devDependencies": {
+    "vitest": "^5.0.3"
+  },
+  "main": "./dist/main.js"
+}

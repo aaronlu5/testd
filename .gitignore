@@ -1,0 +1,23 @@
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+
+# Real environment configuration (only the *.example.json file is committed)
+config/environments.local.json
+
+# Mutable runtime state (directories are kept with .gitkeep)
+# Optional local plain-text secrets (never commit; restrict to the worker account)
+runtime/secrets.local.json
+runtime/platform.db
+runtime/platform.db-*
+runtime/artifacts/*
+!runtime/artifacts/.gitkeep
+runtime/logs/*
+!runtime/logs/.gitkeep
+
+# End-to-end backend state
+apps/web/e2e/.runtime/

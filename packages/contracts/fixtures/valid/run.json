@@ -1,0 +1,19 @@
+{
+  "id": "11111111-1111-4111-8111-111111111111",
+  "kind": "test",
+  "status": "Queued",
+  "environmentId": "local-example",
+  "requestedBy": "tester@example.test",
+  "requestedAt": "2026-01-16T08:00:00.000Z",
+  "test": { "id": "01JTEST8M2B5D4KQ7XNH3WV9ZA", "version": 1 },
+  "testData": { "id": "01JDATA0N5C6E7MR8YPJ4XW1BC", "version": 1 },
+  "variableOverrides": {},
+  "snapshots": {
+    "environment": {
+      "id": "local-example",
+      "name": "Local example environment",
+      "classification": "TEST",
+      "targets": {}
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "environments": [
+    {
+      "id": "local-example",
+      "name": "Local example environment (no live targets)",
+      "classification": "TEST",
+      "limits": {
+        "maxStepTimeoutSeconds": 120,
+        "maxRetryAttempts": 3,
+        "maxSuiteConcurrency": 2,
+        "maxPayloadCaptureBytes": 65536
+      },
+      "targets": {
+        "example-api": {
+          "kind": "http",
+          "baseUrl": "https://example.invalid/api",
+          "allowedPaths": ["/orders/*"]
+        },
+        "example-storage": {
+          "kind": "azureBlob",
+          "accountUrl": "https://example.invalid",
+          "allowedContainers": ["example-container"]
+        },
+        "example-sql": {
+          "kind": "sqlServer",
+          "server": "localhost,1433",
+          "database": "orders",
+          "allowedSchemas": ["dbo"],
+          "allowedOperations": ["query", "insert", "update", "delete"],
+          "credential": {
+            "type": "secretReference",
+            "usage": "connectionString",
+            "provider": "localPlainText",
+            "name": "example-sql-connection"
+          }
+        }
+      }
+    }
+  ]
+}

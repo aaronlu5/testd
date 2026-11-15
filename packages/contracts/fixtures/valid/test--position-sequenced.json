@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 2,
+  "id": "01JTEST8M2B5D4KQ7XNH3WV9ZA",
+  "version": 3,
+  "name": "Delay, inspect, then assert",
+  "tags": ["phase2"],
+  "metadata": {
+    "createdAt": "2026-01-15T09:30:00.000Z",
+    "createdBy": "tester@example.test"
+  },
+  "editor": {
+    "layoutDirection": "vertical",
+    "autoSequenceFromPosition": true
+  },
+  "variables": {},
+  "nodes": [
+    {
+      "id": "wait",
+      "type": "delay",
+      "name": "Wait",
+      "parameters": {
+        "durationSeconds": 1
+      },
+      "position": {
+        "x": 120,
+        "y": 0
+      }
+    },
+    {
+      "id": "inspect",
+      "type": "breakpoint",
+      "name": "Inspect before assert",
+      "parameters": {
+        "enabled": true,
+        "message": "Review the output before continuing."
+      },
+      "position": {
+        "x": 120,
+        "y": 140
+      }
+    },
+    {
+      "id": "verify",
+      "type": "assert",
+      "name": "Verify",
+      "parameters": {
+        "actual": 1,
+        "operator": "equals",
+        "expected": 1
+      },
+      "position": {
+        "x": 120,
+        "y": 280
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "wait",
+      "to": "inspect",
+      "metadata": {
+        "systemManaged": true
+      }
+    },
+    {
+      "from": "inspect",
+      "to": "verify",
+      "metadata": {
+        "systemManaged": true
+      }
+    }
+  ]
+}

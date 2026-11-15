@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "01JTEST8M2B5D4KQ7XNH3WV9ZA",
+  "version": 1,
+  "name": "Order processing happy path",
+  "description": "Delays briefly, transforms the order, and asserts its status.",
+  "tags": ["orders", "smoke"],
+  "metadata": { "createdAt": "2026-01-15T09:30:00.000Z", "createdBy": "tester@example.test" },
+  "variables": { "orderId": "{{testData.order.id}}" },
+  "nodes": [
+    {
+      "id": "wait",
+      "type": "delay",
+      "name": "Wait for processing",
+      "parameters": { "durationSeconds": 1 },
+      "execution": { "timeoutSeconds": 30, "retry": { "maxAttempts": 2 } }
+    },
+    {
+      "id": "shape-order",
+      "type": "transform.json",
+      "name": "Shape order",
+      "parameters": {
+        "input": "{{testData.order}}",
+        "mapping": { "id": "$.id" }
+      }
+    },
+    {
+      "id": "verify-id",
+      "type": "assert",
+      "name": "Verify order id",
+      "parameters": {
+        "actual": "{{steps.shape-order.output.id}}",
+        "operator": "equals",
+        "expected": "{{variables.orderId}}"
+      }
+    }
+  ],
+  "edges": [
+    { "from": "wait", "to": "shape-order" },
+    { "from": "shape-order", "to": "verify-id" }
+  ]
+}

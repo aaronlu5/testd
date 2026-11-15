@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "id": "01JSWEET9P6D7F8NS0ZQK5YX2D",
+  "version": 1,
+  "name": "Orders smoke suite",
+  "tags": [],
+  "metadata": { "createdAt": "2026-01-15T10:00:00.000Z", "createdBy": "tester@example.test" },
+  "items": [{ "testId": "01JTEST8M2B5D4KQ7XNH3WV9ZA", "dataSetId": "01JDATA0N5C6E7MR8YPJ4XW1BC" }]
+}

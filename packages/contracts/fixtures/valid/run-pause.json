@@ -1,0 +1,18 @@
+{
+  "id": "01JPAVSE8M2B5D4KQ7XNH3WV9Z",
+  "runId": "01JRVN3Z8M2B5D4KQ7XNH3WV9Z",
+  "breakpointStepRunId": "01JSTEP18M2B5D4KQ7XNH3WV9Z",
+  "breakpointNodeId": "inspect",
+  "message": "Review the output before continuing.",
+  "nextNodeId": "verify",
+  "nextNodeName": "Verify",
+  "nextNodeType": "assert",
+  "nextResolvedInputPreview": {
+    "actual": 1,
+    "operator": "equals",
+    "expected": 1,
+    "token": "***REDACTED***"
+  },
+  "pausedAt": "2026-01-15T10:00:05.000Z",
+  "continuationGeneration": 0
+}

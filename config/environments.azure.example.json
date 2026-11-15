@@ -1,0 +1,51 @@
+{
+  "environments": [
+    {
+      "id": "orders-test",
+      "name": "Orders test (Azure, example only)",
+      "classification": "TEST",
+      "limits": {
+        "maxStepTimeoutSeconds": 120,
+        "maxRetryAttempts": 3,
+        "maxSuiteConcurrency": 2
+      },
+      "targets": {
+        "orders-storage": {
+          "kind": "azureBlob",
+          "accountUrl": "https://example.blob.core.windows.net",
+          "allowedContainers": ["inbound-orders"],
+          "allowedOperations": ["upload", "download"]
+        },
+        "orders-events": {
+          "kind": "azureServiceBus",
+          "fullyQualifiedNamespace": "example.servicebus.windows.net",
+          "allowedEntities": ["order-events"],
+          "allowedOperations": ["send", "inspect"],
+          "credential": {
+            "type": "secretReference",
+            "usage": "connectionString",
+            "provider": "localPlainText",
+            "name": "orders-service-bus-connection"
+          }
+        },
+        "orders-sql": {
+          "kind": "sqlServer",
+          "server": "example.database.windows.net,1433",
+          "database": "orders",
+          "allowedSchemas": ["sales"],
+          "allowedOperations": ["query"]
+        },
+        "orders-api": {
+          "kind": "http",
+          "baseUrl": "https://example.azure-api.net",
+          "allowedPaths": ["/orders/*"],
+          "authentication": {
+            "type": "secretReference",
+            "provider": "keyVault",
+            "name": "orders-api-key"
+          }
+        }
+      }
+    }
+  ]
+}
